@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn -q -DskipTests compile)",
+      "Bash(mvn -q test-compile)",
+      "Bash(mvn test *)",
+      "Bash(mvn clean *)",
+      "Bash(mvn dependency:tree -Dscope=test)",
+      "Bash(jar tf *)",
+      "Bash(grep -v \"package-info\\\\|\\\\.class$\")",
+      "Bash(grep \"\\\\.class$\")",
+      "Bash(grep -v \"\\\\$\")",
+      "Bash(grep -E \"^\\\\\\\\[INFO\\\\\\\\] Tests run|^\\\\\\\\[INFO\\\\\\\\] BUILD|^\\\\\\\\[ERROR\\\\\\\\]|jacoco.*report|Checkstyle\")",
+      "Bash(mvn checkstyle:check)"
+    ]
+  }
+}
